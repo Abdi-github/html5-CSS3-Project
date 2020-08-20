@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.5;
+}
+
+header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    flex: 1 0 400px;
+    background: url(images/banner.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+}
+
+.banner-desc {
+    align-self: center;
+    padding-left: 0.5em;
+}
+
+.banner-desc h1,
+.banner-desc p {
+    color: white;
+}
+
+.about-desc {
+    max-width: 90vw;
+    margin: 1em auto;
+}
+
+section {
+    margin: 0.5em 0;
+}
+
+.banner {
+    margin-top: 0;
+}
+
+.each-desc {
+    max-width: 90vw;
+    margin: 1em auto;
+}
+
+.each-desc-image {
+    display: block;
+    width: 100%;
+    max-height: 400px;
+    max-width: 450px;
+}
+
+.each-desc div {
+    padding: 1em 0;
+}
+
+.titles {
+    font-size: 1.8em;
+    padding-bottom: 0.5em;
+    text-transform: capitalize;
+}
+
+
+/* ingredients section */
+
+.desc-lists {
+    list-style-type: square;
+    padding-left: 1em;
+}
+
+.list-item {
+    padding: 0.5em 0;
+}
+
+
+/* end of section */
+
+
+/* media query */
+
+@media screen and (min-width:768px) {
+    .each-desc {
+        display: grid;
+        gap: 2em;
+        grid-template-areas: "t t t t t t t p p p p p";
+    }
+    .each-desc-text {
+        grid-area: t;
+    }
+    .each-desc-pic {
+        grid-area: p;
+        display: flex;
+        align-items: center;
+    }
+    header {
+        min-height: 100vh;
+    }
+}
